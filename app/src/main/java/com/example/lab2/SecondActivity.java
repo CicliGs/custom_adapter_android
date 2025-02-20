@@ -6,13 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
     private List<Product> checkedProducts;
     private TextView textViewCartCount, textViewCartSum;
+    private CartAdapter cartAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,12 @@ public class SecondActivity extends AppCompatActivity {
             checkedProducts = new ArrayList<>();
         }
 
+        // Инициализация адаптера для корзины
+        cartAdapter = new CartAdapter(this, checkedProducts);
+        listViewCart.setAdapter(cartAdapter);
+
         // Обновляем текстовые поля с количеством и суммой
         updateCartCountAndSum();
-
-        // Адаптер для списка
-        ProductAdapter cartAdapter = new ProductAdapter(this, checkedProducts);
-        listViewCart.setAdapter(cartAdapter);
 
         // Кнопка возврата
         buttonBack.setOnClickListener(new View.OnClickListener() {

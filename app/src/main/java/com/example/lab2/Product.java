@@ -48,7 +48,6 @@ public class Product implements Parcelable {
         dest.writeByte((byte) (isChecked ? 1 : 0));
     }
 
-    // Геттеры и сеттеры
     public int getId() {
         return id;
     }

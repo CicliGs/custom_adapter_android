@@ -11,8 +11,8 @@
         android:id="@+id/listViewCart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingTop="16dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:paddingTop="32dp"/>
 
     <!-- Текстовые поля для подсчета элементов и суммы -->
     <TextView
@@ -36,4 +36,9 @@
         android:layout_height="wrap_content"
         android:text="Back to Products"
         android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Разработал Германович Е. А."/>
 </LinearLayout>
